@@ -5,10 +5,12 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
+import XMonad.Hooks.SetWMName
+
 
 main = xmonad def
-     { borderWidth = 3
+     { borderWidth = 2
      , logHook     = dynamicLog
-     , terminal    = "/usr/bin/gnome-terminal.wrapper"
      , modMask     = mod4Mask
+     , startupHook = setWMName "LG3D"
      }
